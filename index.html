@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J.A.R.V.I.S.</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #00ffff;
+  font-family: monospace;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  padding: 25px;
+}
+
+h1 {
+  font-size: 32px;
+  letter-spacing: 5px;
+  text-shadow: 0 0 15px #00ffff;
+}
+
+.circle {
+  width: 180px;
+  height: 180px;
+  border: 3px solid #00ffff;
+  border-radius: 50%;
+  margin: 40px auto;
+  box-shadow: 0 0 30px #00ffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+}
+
+p {
+  margin: 20px;
+  color: #aaa;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  background: #001a1a;
+  border: 1px solid #00ffff;
+  color: white;
+  border-radius: 8px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px 30px;
+  background: #00ffff;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+#output {
+  margin-top: 25px;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>J.A.R.V.I.S.</h1>
+<p>PERSONAL AI ASSISTANT</p>
+
+<div class="circle">◉</div>
+
+<p>YOUR SYSTEM IS ONLINE</p>
+
+<input id="command" placeholder="Enter your command">
+
+<button onclick="runJarvis()">EXECUTE</button>
+
+<div id="output">Awaiting your command...</div>
+
+</div>
+
+<script>
+function runJarvis() {
+  let command = document
+    .getElementById("command").value;
+
+  document.getElementById("output").innerText =
+    "JARVIS: You said - " + command;
+}
+</script>
+
+</body>
+</html>
+
